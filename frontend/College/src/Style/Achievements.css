@@ -1,0 +1,25 @@
+/* === General Section Layout === */
+.uni{
+  margin-top: 20px;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+  font-style:oblique;
+  font-weight: 700;
+  
+}
+
+.animate-card {
+  transform: scale(1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.animate-card:hover {
+  transform: scale(1.03);
+  /* box-shadow: 0 0 30px rgba(0, 123, 255, 0.2); */
+}
+ 
+.uni{
+    
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+  font-style:oblique;
+  font-weight: 700;
+}

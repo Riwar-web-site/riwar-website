@@ -1,0 +1,233 @@
+:root {
+      --bg-color: rgba(255, 255, 255, 0.15);
+      --blur: 15px;
+      --neo-light: #ffffff60;
+      --neo-dark: #00000020;
+      --glass-color: rgba(255, 255, 255, 0.1);
+      --accent: #4b6e87;
+      --accent2: #e0e7ef;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #d1d9e6, #f1f3f6);
+      height: 100vh;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: var(--glass-color);
+      backdrop-filter: blur(var(--blur));
+      border-radius: 20px;
+      box-shadow: 8px 8px 20px var(--neo-dark), -8px -8px 20px var(--neo-light);
+      margin: 2rem;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .menu {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .menu-item {
+      position: relative;
+      padding: 0.5rem 1rem;
+      border-radius: 12px;
+      color: #333;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+    }
+
+   
+    
+.menu-item:hover, .menu-item:focus-within {
+  background: var(--accent2);
+  color: var(--accent);
+  box-shadow: 0 2px 8px var(--neo-dark);
+}
+
+
+    .dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      display: none;
+      flex-direction: column;
+
+      background: var(--accent2);
+      backdrop-filter: blur(var(--blur));
+      box-shadow: 6px 6px 12px var(--neo-dark), -6px -6px 12px var(--neo-light);
+      border-radius: 12px;
+      padding: 0.5rem 0;
+      z-index: 999;
+    }
+
+    .menu-item:hover .dropdown {
+      display: flex;
+      animation: dropdownFade 0.3s ease-in-out;
+    }
+
+    .dropdown a {
+      padding: 0.5rem 1.5rem;
+      color: #333;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .dropdown a:hover {
+        color: var(--accent);
+      background: var(--glass-color);
+      box-shadow: 4px 4px 10px var(--neo-dark), inset -4px -4px 10px var(--neo-light);
+
+
+    }
+
+    @keyframes dropdownFade {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .menu {
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: var(--glass-color);
+        backdrop-filter: blur(var(--blur));
+        width: 100%;
+        display: none;
+      }
+      .menu.open {
+        display: flex;
+      }
+      .menu-item:hover .dropdown {
+        position: relative;
+        animation: none;
+      }
+      .toggle-btn {
+        display: block;
+        cursor: pointer;
+      }
+    }
+
+    .toggle-btn {
+      display: none;
+      font-size: 1.5rem;
+      color: #333;
+    }
+
+
+
+    /* Glassy Neomorphic Search Bar */
+.search-bar {
+  margin: 0 1rem;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar input {
+  width: 100%;
+  max-width: 300px;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 12px;
+  background: var(--glass-color);
+  backdrop-filter: blur(var(--blur));
+  box-shadow: inset 4px 4px 10px var(--neo-dark), inset -4px -4px 10px var(--neo-light);
+  color: #333;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.search-bar input:focus {
+  outline: none;
+  background: var(--accent2);
+  box-shadow: 0 0 10px var(--accent);
+  color: var(--accent);
+}
+
+/* Make menu scrollable horizontally if content exceeds */
+.menu-scroll {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.menu-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+.menu-scroll::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 10px;
+}
+.menu-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Adjust navbar for wrapping elements properly */
+.navbar {
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Responsive search bar for mobile */
+@media screen and (max-width: 768px) {
+  .search-bar {
+    width: 100%;
+    order: 1;
+    margin-top: 0.5rem;
+  }
+
+  .search-bar input {
+    width: 90%;
+  }
+
+  .menu-scroll {
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+}
+
+
+
+
+.menu-item {
+  position: relative;
+}
+
+.menu-item:hover .dropdown {
+  display: flex; /* or block */
+}
+
+.dropdown {
+  display: flex; /* or block depending on your layout */
+  flex-direction: column;
+  background: var(--accent2);
+  backdrop-filter: blur(var(--blur));
+  box-shadow: 6px 6px 12px var(--neo-dark), -6px -6px 12px var(--neo-light);
+  border-radius: 12px;
+  padding: 0.5rem 0;
+  z-index: 999;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}

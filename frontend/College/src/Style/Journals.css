@@ -1,0 +1,34 @@
+.ad{
+    height: 200px;
+    width:  410px;
+    object-fit: cover;
+}
+
+.ad1{
+    height: 250px;
+    width:  450px;
+    object-fit: cover;
+}
+.uni{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+  font-style:oblique;
+  font-weight: 700;
+}
+
+.upcoming-report-box {
+  background: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 1.08rem;
+  font-weight: 500;
+  color: #232526;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.upcoming-report-box:hover {
+  box-shadow: 0 8px 24px rgba(255,193,7,0.13);
+  transform: translateY(-4px) scale(1.03);
+}

@@ -1,0 +1,144 @@
+/* === General Section Layout === */
+.uni{
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+  font-style:oblique;
+  font-weight: 700;
+  
+}
+/* Background and general page animation */
+.course-bg {
+  background: linear-gradient(135deg, #e0f7fa, #f3e5f5);
+  min-height: 100vh;
+  padding-top: 60px;
+}
+
+/* Headings */
+.gradient-text {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.underline {
+  border-bottom: 3px solid #2575fc;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Card appearance */
+.glass-card {
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  transform: translateY(-5px);
+}
+
+/* Animations */
+@keyframes slideDownFade {
+  0% {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slide-down-fade {
+  animation: slideDownFade 0.8s ease-out;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.scale-up {
+  animation: scaleUp 0.5s ease-in forwards;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.bounce-in {
+  animation: bounceIn 0.6s ease-out;
+}
+
+@keyframes riseText {
+  0% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.rise-text {
+  animation: riseText 0.8s ease forwards;
+}
+
+/* Table styling */
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+  text-align: center;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  transition: background 0.3s ease;
+}
+
+.styled-table tr:hover td {
+  background-color: #e1f5fe;
+}
+
+/* Rainbow glow effect */
+.rainbow-glow {
+  animation: rainbowGlow 3s linear infinite;
+}
+
+@keyframes rainbowGlow {
+  0% { text-shadow: 0 0 5px red; }
+  25% { text-shadow: 0 0 5px orange; }
+  50% { text-shadow: 0 0 5px limegreen; }
+  75% { text-shadow: 0 0 5px dodgerblue; }
+  100% { text-shadow: 0 0 5px violet; }
+}
+
+/* Tilt effect on hover */
+.tilt-card:hover {
+  transform: rotateX(1deg) rotateY(1deg) scale(1.01);
+}

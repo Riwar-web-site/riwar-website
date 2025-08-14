@@ -1,0 +1,31 @@
+.rrc-section .hover-effect {
+  transition: all 0.3s ease-in-out;
+}
+
+.rrc-section .hover-effect:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 1rem 2rem rgba(220, 53, 69, 0.15);
+}
+
+.soft-glow {
+  text-shadow: 1px 1px 6px rgba(255, 0, 0, 0.2);
+}
+
+.rrc-section ul li {
+  font-size: 1rem;
+  line-height: 1.6;
+  transition: all 0.2s ease;
+}
+
+.rrc-section ul li:hover {
+  color: #dc3545;
+  cursor: pointer;
+}
+
+/* === General Section Layout === */
+.uni{
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+  font-style:oblique;
+  font-weight: 700;
+  
+}

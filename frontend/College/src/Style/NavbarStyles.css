@@ -1,0 +1,276 @@
+
+/* Navbar container styling */
+
+
+.glass-navbar {
+  background: rgb(255, 255, 255)rtant;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.25);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 0.8rem 1.2rem;
+  transition: background 0.3s ease;
+  z-index: 1050;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-nav .nav-link {
+  padding: 0.5rem 2.2rem;
+}
+
+/* Brand styling */
+.brand-text {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #003366;
+  letter-spacing: 1px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+
+
+/* Glass dropdowns */
+.navbar-nav .dropdown-menu {
+  background: white;
+  
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  /* background-color: rgba(0, 0, 0, 0.1); */
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.18);
+  box-shadow: 2px 2px 12px rgb(47, 47, 47);
+}
+
+
+
+/* Dropdown item styling */
+.dropdown-item {
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  font-style: normal;
+  font-weight: 500;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+.dropdown-item:hover {
+  background: rgba(0, 123, 255, 0.1);
+  color: #003366;
+}
+
+/* Neumorphic input */
+.neu-input {
+  border: none;
+  border-radius: 12px;
+  padding: 0.5rem 1rem;
+  background: #e0e0e0;
+  box-shadow: inset 4px 4px 10px #bebebe, inset -4px -4px 10px #ffffff;
+  transition: all 0.3s ease;
+  min-width: 140px;
+  width: 200px;
+  height: 36px;
+  font-size: 1rem;
+}
+.neu-input:focus {
+  outline: none;
+  box-shadow: inset 2px 2px 5px #bebebe, inset -2px -2px 5px #ffffff;
+}
+
+/* Neumorphic search button */
+.neu-button {
+  background: #e0e0e0 !important;
+  color: #333 !important;
+  border: none !important;
+  border-radius: 12px !important;
+  padding: 0.5rem 1rem !important;
+  box-shadow: 4px 4px 10px #bebebe, -4px -4px 10px #ffffff;
+  transition: all 0.3s ease;
+  height: 36px !important;
+  font-size: 1rem !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+.neu-button:hover {
+  background: #f2f2f2 !important;
+  box-shadow: inset 2px 2px 6px #bebebe, inset -2px -2px 6px #ffffff;
+}
+/* 
+/* Responsive glass slide-in for small screens */
+/*
+@media (max-width: 991.98px) {
+  .custom-collapse {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 270px;
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(12px);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
+    padding: 1rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1050;
+  }
+  .navbar-collapse.collapse.show {
+    transform: translateX(0%);
+  } 
+}
+
+
+/* Stylish neumorphic + glass input */
+.neu-input {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: none;
+  border-radius: 14px;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  color: #333;
+  box-shadow: inset 4px 4px 8px rgba(0,0,0,0.1),
+              inset -4px -4px 8px rgba(255,255,255,0.6),
+              1px 1px 5px rgba(0,0,0,0.05);
+  transition: all 0.3s ease-in-out;
+}
+
+.neu-input::placeholder {
+  color: #666;
+  font-style: italic;
+}
+
+.neu-input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: inset 2px 2px 6px rgba(0,0,0,0.1),
+              inset -2px -2px 6px rgba(255,255,255,0.6),
+              0 0 8px rgba(1, 91, 186, 0.389);
+}
+
+/* Stylish neumorphic glass button */
+.neu-button {
+  background: linear-gradient(145deg, #f0f0f0, #cacaca) !important;
+  color: #1a1a1a !important;
+  font-weight: 500;
+  border: none !important;
+  border-radius: 14px !important;
+  padding: 0.55rem 1.4rem !important;
+  font-size: 0.95rem;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.08),
+              -5px -5px 10px rgba(255,255,255,0.7),
+              inset 1px 1px 2px rgba(255,255,255,0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.neu-button:hover {
+  background: linear-gradient(145deg, #e6e6e6, #ffffff) !important;
+  box-shadow: inset 3px 3px 6px rgba(0,0,0,0.1),
+              inset -3px -3px 6px rgba(255,255,255,0.8);
+  transform: scale(1.03);
+}
+
+.neu-button:active {
+  transform: scale(0.97);
+}
+
+
+
+/*===================================Item hover aniamtion =======================*/
+
+/* === NAV LINK STYLES (Top Level) === */
+.navbar-nav .nav-link {
+  position: relative;
+  color: #003366 !important;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease, background 0.3s ease;
+  border-radius: 8px;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  color: #003366 !important;
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 2px 12px 0 rgba(0, 91, 186, 0.10), 0 1.5px 6px #b3d1ff44;
+  border-bottom: 2.5px solid #007bff;
+  text-shadow: 0 1px 6px #e3f0ff;
+  transition: all 0.22s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transform: none;
+}
+
+/* Active nav link */
+.navbar-nav .nav-link.active {
+  background-color: rgba(0, 123, 255, 0.12);
+  color: #0056b3 !important;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+
+/* === DROPDOWN ITEMS === */
+.dropdown-menu {
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.dropdown-item {
+  padding: 0.5rem 1.2rem;
+  transition: background 0.3s ease, color 0.3s ease;
+  color: #003366;
+  font-size: 0.95rem;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background: rgba(0, 123, 255, 0.1);
+  color: #0056b3;
+}
+
+/* === SMOOTH TRANSITIONS === */
+.navbar-nav .nav-link,
+.dropdown-item {
+  transition: all 0.25s ease-in-out;
+}
+
+
+
+.product{
+  z-index: 100;
+  position:fixed;
+  top: 0;
+  width:100vw;
+  font-style: normal;
+  
+}
+
+
+.list-group-item:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+
+
+.nav-item-link.active,
+.dropdown-item-link.active {
+  font-weight: bolder;
+  color: #007bff !important;
+  background-color: rgba(0, 123, 255, 0.351);
+  border-radius: 6px;
+}
+
+.position-relative.w-90 {
+  flex: 1 1 200px;
+  max-width: 260px;
+  margin-left: 1rem;
+}

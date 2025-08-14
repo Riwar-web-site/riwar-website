@@ -1,0 +1,137 @@
+/* SupportingStaff.css */
+
+
+
+/* === General Section Layout === */
+.uni{
+
+margin-top:30px ;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+  font-style:oblique;
+  font-weight: 700;
+  
+}
+
+
+/* Background */
+.supporting-staff-bg {
+  background: linear-gradient(to right, #f0f4f8, #dbe9f4);
+  min-height: 100vh;
+}
+
+/* Glass card styles */
+.glass-card {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card on hover */
+.hover-glow:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15), 0 0 15px rgba(0, 128, 255, 0.4);
+}
+
+/* Headline animation */
+.slide-down-fade {
+  animation: slideDownFade 0.8s ease-in-out;
+}
+
+@keyframes slideDownFade {
+  0% {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+/* Rainbow text glow */
+.rainbow-glow {
+  text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff, 0 0 20px #00ffff;
+}
+
+/* Table styles */
+.styled-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 1rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.styled-table thead {
+  background-color: #e3f2fd;
+  font-weight: bold;
+  color: #1a237e;
+}
+
+.styled-table tbody tr:nth-child(even) {
+  background-color: #f4f6f8;
+}
+
+.styled-table tbody tr:hover {
+  background-color: #d0e8ff;
+  transition: background-color 0.3s ease;
+}
+
+/* Table row animation */
+.row-animate {
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Page entrance animation */
+.animate-bg {
+  animation: bgFade 1.5s ease both;
+}
+
+@keyframes bgFade {
+  from {
+    opacity: 0;
+    background-color: #ffffff;
+  }
+  to {
+    opacity: 1;
+    background-color: #f0f4f8;
+  }
+}
+
+/* Optional additional scaling effect */
+.scale-up {
+  animation: scaleUp 0.5s ease-out;
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.98);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

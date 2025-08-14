@@ -1,0 +1,76 @@
+/* === General Section Layout === */
+.uni{
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+  font-style:oblique;
+  font-weight: 700;
+  
+}
+
+
+.research-section {
+  background: linear-gradient(135deg, #f9f9f9, #e8f0ff);
+  border-radius: 20px;
+  padding: 3rem 1.5rem;
+  animation: fadeIn 1.5s ease-in;
+}
+
+.research-card {
+  border: none;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.research-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.text-animated-gradient {
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: slideGradient 4s infinite alternate;
+}
+
+@keyframes slideGradient {
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 100% 50%;
+  }
+}
+
+.fade-in-delay {
+  animation: fadeIn 2s ease-in;
+}
+
+.slide-up {
+  animation: slideUp 1s ease forwards;
+  
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,29 @@
+.nss-section .hover-effect {
+  transition: all 0.3s ease;
+}
+
+.nss-section .hover-effect:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.soft-glow {
+  text-shadow: 1px 1px 5px rgba(255, 0, 0, 0.2);
+}
+
+.nss-section ul li {
+  font-size: 1rem;
+  line-height: 1.6;
+  transition: color 0.2s ease;
+}
+
+.nss-section ul li:hover {
+  color: #dc3545;
+  cursor: pointer;
+}
+
+.uni{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+  font-style:oblique;
+  font-weight: 700;
+}

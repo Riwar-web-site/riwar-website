@@ -1,0 +1,362 @@
+/* NCC & NSS Section Styles */
+.ncc-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  min-height: 100vh;
+  padding: 4rem 0;
+}
+
+/* Title Styling */
+.title-icon {
+  font-size: 3rem;
+  margin-right: 0.5rem;
+  display: inline-block;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Card Styling */
+.info-card,
+.member-card-container,
+.activity-card-container,
+.awards-card {
+  transition: all 0.3s ease;
+  border-radius: 15px !important;
+  overflow: hidden;
+}
+
+.info-card:hover,
+.member-card-container:hover,
+.activity-card-container:hover,
+.awards-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15) !important;
+}
+
+.info-card .card-header,
+.member-card-container .card-header,
+.activity-card-container .card-header,
+.awards-card .card-header {
+  border-radius: 15px 15px 0 0 !important;
+  border: none;
+}
+
+/* Member Cards */
+.member-card {
+  background: #f8f9fa;
+  border-left: 4px solid #0d6efd;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.member-card:hover {
+  background: #e3f2fd;
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(13, 110, 253, 0.15);
+}
+
+.avatar-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #0d6efd, #0b5ed7);
+  color: white;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 8px rgba(13, 110, 253, 0.3);
+}
+
+.member-info {
+  flex: 1;
+}
+
+.member-info h6 {
+  color: #495057;
+  margin-bottom: 0.5rem;
+}
+
+/* Activity Cards */
+.activity-card {
+  background: #f8f9fa;
+  border-left: 4px solid #198754;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  height: 100%;
+}
+
+.activity-card:hover {
+  background: #d1e7dd;
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(25, 135, 84, 0.15);
+}
+
+.activity-card h6 {
+  color: #495057;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* Award Items */
+.award-item {
+  background: #f8f9fa;
+  border-left: 4px solid #ffc107;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.award-item:hover {
+  background: #fff3cd;
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(255, 193, 7, 0.15);
+}
+
+.award-item h6 {
+  color: #495057;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* Navigation Tabs */
+.nav-pills .nav-link {
+  border-radius: 25px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin: 0 0.25rem;
+}
+
+.nav-pills .nav-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-pills .nav-link.active {
+  background: linear-gradient(135deg, #0d6efd, #0b5ed7);
+  color: white;
+  box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
+}
+
+/* Member List */
+.member-list {
+  max-height: 300px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #0d6efd #f8f9fa;
+}
+
+.member-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.member-list::-webkit-scrollbar-track {
+  background: #f8f9fa;
+  border-radius: 3px;
+}
+
+.member-list::-webkit-scrollbar-thumb {
+  background: #0d6efd;
+  border-radius: 3px;
+}
+
+.member-list::-webkit-scrollbar-thumb:hover {
+  background: #0b5ed7;
+}
+
+/* Awards List */
+.awards-list {
+  max-height: 400px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #ffc107 #f8f9fa;
+}
+
+.awards-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.awards-list::-webkit-scrollbar-track {
+  background: #f8f9fa;
+  border-radius: 3px;
+}
+
+.awards-list::-webkit-scrollbar-thumb {
+  background: #ffc107;
+  border-radius: 3px;
+}
+
+.awards-list::-webkit-scrollbar-thumb:hover {
+  background: #e0a800;
+}
+
+.member-list,
+.awards-list {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* Badge Styling */
+.badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ncc-section {
+    padding: 2rem 0;
+  }
+  
+  .title-icon {
+    font-size: 2.5rem;
+  }
+  
+  .info-card,
+  .member-card-container,
+  .activity-card-container,
+  .awards-card {
+    margin-bottom: 1.5rem;
+  }
+  
+  .member-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .avatar-circle {
+    margin-bottom: 1rem;
+    margin-right: 0 !important;
+  }
+  
+  .nav-pills .nav-link {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .info-card .card-header h4,
+  .member-card-container .card-header h4,
+  .activity-card-container .card-header h4,
+  .awards-card .card-header h4 {
+    font-size: 1.1rem;
+  }
+  
+  .member-info h6 {
+    font-size: 0.9rem;
+  }
+  
+  .activity-card h6 {
+    font-size: 0.9rem;
+  }
+  
+  .avatar-circle {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+  
+  .title-icon {
+    font-size: 2rem;
+  }
+}
+
+/* Animation Classes */
+.animate__fadeIn {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover Effects */
+.bg-light-hover {
+  transition: background-color 0.3s ease;
+}
+
+.bg-light-hover:hover {
+  background-color: #e9ecef !important;
+}
+
+/* Tab Content Animation */
+.tab-content {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Card Header Icons */
+.card-header span {
+  font-size: 1.5rem;
+}
+
+/* Activity Grid */
+.activity-card-container .row {
+  margin: 0;
+}
+
+.activity-card-container .col-md-6,
+.activity-card-container .col-lg-4 {
+  padding: 0.5rem;
+}
+
+/* Statistics Display */
+.text-info {
+  color: #0dcaf0 !important;
+}
+
+/* Custom Scrollbar for Activity Lists */
+.activity-card-container .card-body {
+  max-height: 500px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #198754 #f8f9fa;
+}
+
+.activity-card-container .card-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.activity-card-container .card-body::-webkit-scrollbar-track {
+  background: #f8f9fa;
+  border-radius: 3px;
+}
+
+.activity-card-container .card-body::-webkit-scrollbar-thumb {
+  background: #198754;
+  border-radius: 3px;
+}
+
+.activity-card-container .card-body::-webkit-scrollbar-thumb:hover {
+  background: #146c43;
+}

@@ -1,0 +1,413 @@
+/* Students Union Section Styles */
+.students-union-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  min-height: 100vh;
+  padding: 4rem 0;
+}
+
+/* Title Styling */
+.title-icon {
+  font-size: 3rem;
+  margin-right: 0.5rem;
+  display: inline-block;
+  animation: unionPulse 2s infinite;
+}
+
+@keyframes unionPulse {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(-5deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+/* Card Styling */
+.info-card,
+.member-card-container,
+.responsibility-card-container,
+.activity-card-container {
+  transition: all 0.3s ease;
+  border-radius: 15px !important;
+  overflow: hidden;
+}
+
+.info-card:hover,
+.member-card-container:hover,
+.responsibility-card-container:hover,
+.activity-card-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15) !important;
+}
+
+.info-card .card-header,
+.member-card-container .card-header,
+.responsibility-card-container .card-header,
+.activity-card-container .card-header {
+  border-radius: 15px 15px 0 0 !important;
+  border: none;
+}
+
+/* Member Cards */
+.member-card {
+  background: #f8f9fa;
+  border-left: 4px solid #0d6efd;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.member-card:hover {
+  background: #e3f2fd;
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(13, 110, 253, 0.15);
+}
+
+.avatar-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #0d6efd, #0b5ed7);
+  color: white;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 8px rgba(13, 110, 253, 0.3);
+}
+
+.member-info {
+  flex: 1;
+}
+
+.member-info h6 {
+  color: #495057;
+  margin-bottom: 0.5rem;
+}
+
+/* Responsibility Cards */
+.responsibility-card {
+  background: #f8f9fa;
+  border-left: 4px solid #198754;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  height: 100%;
+}
+
+.responsibility-card:hover {
+  background: #d1e7dd;
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(25, 135, 84, 0.15);
+}
+
+.responsibility-card h6 {
+  color: #495057;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* Activity Cards */
+.activity-card {
+  background: #f8f9fa;
+  border-left: 4px solid #ffc107;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  height: 100%;
+}
+
+.activity-card:hover {
+  background-color: white;
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(255, 193, 7, 0.15);
+}
+
+.activity-card h6 {
+  color: #495057;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* Member List */
+.member-list {
+  max-height: 300px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #0d6efd #f8f9fa;
+}
+
+.member-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.member-list::-webkit-scrollbar-track {
+  background: #f8f9fa;
+  border-radius: 3px;
+}
+
+.member-list::-webkit-scrollbar-thumb {
+  background: #0d6efd;
+  border-radius: 3px;
+}
+
+.member-list::-webkit-scrollbar-thumb:hover {
+  background: #0b5ed7;
+}
+
+/* Responsibility List */
+.responsibility-list {
+  max-height: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #198754 #f8f9fa;
+}
+
+.responsibility-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.responsibility-list::-webkit-scrollbar-track {
+  background: #f8f9fa;
+  border-radius: 3px;
+}
+
+.responsibility-list::-webkit-scrollbar-thumb {
+  background: #198754;
+  border-radius: 3px;
+}
+
+.responsibility-list::-webkit-scrollbar-thumb:hover {
+  background: #146c43;
+}
+
+/* Badge Styling */
+.badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+}
+
+/* Union Theme Colors */
+.text-primary {
+  color: #0d6efd !important;
+}
+
+.bg-primary {
+  background-color: #0d6efd !important;
+}
+
+.bg-success {
+  background-color: #198754 !important;
+}
+
+.bg-info {
+  background-color: #0dcaf0 !important;
+}
+
+.bg-warning {
+  background-color: #ffc107 !important;
+}
+
+.bg-danger {
+  background-color: #dc3545 !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .students-union-section {
+    padding: 2rem 0;
+  }
+  
+  .title-icon {
+    font-size: 2.5rem;
+  }
+  
+  .info-card,
+  .member-card-container,
+  .responsibility-card-container,
+  .activity-card-container {
+    margin-bottom: 1.5rem;
+  }
+  
+  .member-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .avatar-circle {
+    margin-bottom: 1rem;
+    margin-right: 0 !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .info-card .card-header h4,
+  .member-card-container .card-header h4,
+  .responsibility-card-container .card-header h4,
+  .activity-card-container .card-header h4 {
+    font-size: 1.1rem;
+  }
+  
+  .member-info h6 {
+    font-size: 0.9rem;
+  }
+  
+  .responsibility-card h6,
+  .activity-card h6 {
+    font-size: 0.9rem;
+  }
+  
+  .avatar-circle {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+  
+  .title-icon {
+    font-size: 2rem;
+  }
+}
+
+/* Animation Classes */
+.animate__fadeIn {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover Effects */
+.bg-light-hover {
+  transition: background-color 0.3s ease;
+}
+
+.bg-light-hover:hover {
+  background-color: #e9ecef !important;
+}
+
+/* Card Header Icons */
+.card-header span {
+  font-size: 1.5rem;
+}
+
+/* Activity Grid */
+.activity-card-container .row {
+  margin: 0;
+}
+
+.activity-card-container .col-md-6,
+.activity-card-container .col-lg-4 {
+  padding: 0.5rem;
+}
+
+/* Statistics Display */
+.text-info {
+  color: #0dcaf0 !important;
+}
+
+/* Custom Scrollbar for Activity Lists */
+.activity-card-container .card-body {
+  max-height: 500px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #ffc107 #f8f9fa;
+}
+
+.activity-card-container .card-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.activity-card-container .card-body::-webkit-scrollbar-track {
+  background: #f8f9fa;
+  border-radius: 3px;
+}
+
+.activity-card-container .card-body::-webkit-scrollbar-thumb {
+  background: #ffc107;
+  border-radius: 3px;
+}
+
+.activity-card-container .card-body::-webkit-scrollbar-thumb:hover {
+  background: #e0a800;
+}
+
+/* Union Theme Enhancements */
+.students-union-section .card {
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.students-union-section .card-header {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.students-union-section .badge {
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+/* Text Styling */
+.students-union-section .lead {
+  font-weight: 400;
+  color: #6c757d;
+}
+
+.students-union-section .text-muted {
+  color: #6c757d !important;
+}
+
+/* Priority Badge Colors */
+.badge.bg-danger {
+  background-color: #dc3545 !important;
+}
+
+.badge.bg-warning {
+  background-color: #ffc107 !important;
+  color: #000 !important;
+}
+
+/* Leadership Theme */
+.students-union-section .member-card {
+  border-left-color: #0d6efd;
+}
+
+.students-union-section .responsibility-card {
+  border-left-color: #198754;
+}
+
+.students-union-section .activity-card {
+  border-left-color: #ffc107;
+}
+
+/* Enhanced Typography */
+.students-union-section h1 {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.students-union-section .card-header h4 {
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+/* List Styling */
+.students-union-section .list-unstyled li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f8f9fa;
+}
+
+.students-union-section .list-unstyled li:last-child {
+  border-bottom: none;
+}

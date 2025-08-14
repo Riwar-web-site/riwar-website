@@ -1,0 +1,208 @@
+.ad{
+    height: 200px;
+    width:  410px;
+    object-fit: cover;
+}
+
+.ad1{
+    height: 250px;
+    width:  450px;
+    object-fit: cover;
+}
+
+.horizontal-carousel {
+  overflow: hidden;
+  position: relative;
+  scrollbar-width: none; /* Firefox */
+}
+.horizontal-carousel::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.horizontal-scroll {
+  display: flex;
+  animation: scroll-left 30s linear infinite;
+  gap: 1rem;
+  scrollbar-width: none; /* Firefox */
+}
+.horizontal-scroll::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.horizontal-scroll {
+  display: flex;
+  animation: scroll-left 30s linear infinite;
+  gap: 1rem;
+}
+
+.carousel-image {
+  min-width: 300px;
+  height: auto;
+  border-radius: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.carousel-image:hover {
+  transform: scale(1.05);
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.navP{
+    position: sticky;
+    top: 60px;
+
+}
+
+.zin{
+    z-index: -1;
+}
+
+.glass-navbar {
+  position: relative;
+  z-index: 1;  /* lower than 1050 */
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+/* Modern Library Card Styles */
+.modern-card {
+  background: #fff;
+  border-radius: 18px !important;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+  border: 1.5px solid #e9ecef;
+  transition: box-shadow 0.4s cubic-bezier(0.22,1,0.36,1), transform 0.4s cubic-bezier(0.22,1,0.36,1), border-color 0.3s;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  margin-bottom: 1.5rem;
+}
+
+.modern-card:hover, .hover-scale:hover {
+  box-shadow: 0 12px 32px rgba(0,123,255,0.13), 0 2px 8px rgba(0,0,0,0.08);
+  border-color: #b3e0ff;
+  transform: translateY(-6px) scale(1.025);
+  z-index: 2;
+}
+
+/* Ensure grid spacing is consistent */
+#services .row.g-4, #resources .row.g-4 {
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}
+#services .col, #resources .col {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 2rem !important;
+  color: #0d6efd;
+  text-shadow: 0 2px 8px rgba(0,153,255,0.08);
+}
+
+/* Responsive grid tweaks */
+@media (max-width: 991px) {
+  .modern-card {
+    min-height: 180px;
+  }
+  .section-title {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 767px) {
+  .modern-card {
+    min-height: 140px;
+    padding: 1.2rem !important;
+  }
+  .section-title {
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem !important;
+  }
+}
+
+/* Card content alignment */
+.modern-card .card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+}
+
+.modern-card .card-text, .modern-card ul {
+  font-size: 1rem;
+}
+
+.modern-card ul {
+  padding-left: 1.2rem;
+  margin-bottom: 0;
+}
+
+/* Team image tweaks */
+.modern-card img[alt] {
+  border: 3px solid #e9ecef;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+/* Remove default card border */
+.card {
+  border: none !important;
+}
+
+/* Section spacing */
+.library-section .container {
+  margin-bottom: 2.5rem;
+}
+
+/* Carousel tweaks */
+.horizontal-carousel {
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+.horizontal-scroll {
+  display: flex;
+  align-items: center;
+}
+.carousel-image {
+  height: 120px;
+  width: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: box-shadow 0.4s, transform 0.4s;
+}
+.carousel-image:hover {
+  box-shadow: 0 8px 24px rgba(0,123,255,0.13);
+  transform: scale(1.04);
+}
+
+/* Misc */
+.library-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  min-height: 100vh;
+  padding-top: 2rem;
+}
+
+/* Responsive card grid fix */
+@media (max-width: 575px) {
+  .modern-card {
+    min-height: 100px;
+    padding: 0.7rem !important;
+  }
+  .carousel-image {
+    height: 80px;
+    width: 120px;
+  }
+}

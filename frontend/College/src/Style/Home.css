@@ -1,0 +1,224 @@
+body, .home-landing {
+  color: #232526;
+}
+.card, .card-title, .card-text, h1, h2, h3, h4, h5, h6, .lead, .fw-bold {
+  color: #232526 !important;
+}
+
+/* If you have sections with colored backgrounds, ensure text is white there: */
+.bg-primary, .bg-success, .bg-info, .bg-warning, .bg-dark, .bg-secondary {
+  color: #fff !important;
+}
+
+.hover-animate{
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-animate:hover {
+  transform: translateY(-8px) scale(1.02);
+  /* box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); */
+}
+
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+}
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease-in forwards;
+}
+.delay-1 {
+  animation-delay: 0.3s;
+}
+.delay-2 {
+  animation-delay: 0.6s;
+}
+.delay-3 {
+  animation-delay: 0.9s;
+}
+.delay-4 {
+  animation-delay: 1.2s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hero Carousel */
+.hero-carousel {
+  box-shadow: 0 8px 32px rgba(102,126,234,0.13), 0 2px 8px rgba(0,0,0,0.08);
+  border-radius: 2rem !important;
+  overflow: hidden;
+  position: relative;
+}
+.hero-img {
+  filter: brightness(0.93) saturate(1.08);
+  border-radius: 2rem !important;
+}
+.hero-caption {
+  background: rgba(34, 34, 60, 0.55);
+  border-radius: 1.2rem;
+  padding: 2rem 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 2.5rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.13);
+}
+.hero-caption h1, .hero-caption .display-4 {
+  color: #fff;
+  font-weight: 800;
+  letter-spacing: -1px;
+  text-shadow: 0 2px 12px rgba(102,126,234,0.18);
+}
+.text-gradient {
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.scroll-down-cta {
+  position: absolute;
+  left: 50%;
+  bottom: 0.5rem;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  animation: fadeInUp 1.2s 0.5s both;
+}
+.scroll-down-text {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.2rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+.scroll-down-arrow {
+  font-size: 2rem;
+  color: #fff;
+  animation: bounceDown 1.2s infinite alternate;
+}
+@keyframes bounceDown {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(10px); }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Modern Home Card */
+.modern-home-card {
+  background: rgba(255,255,255,0.85);
+  border-radius: 1.5rem !important;
+  box-shadow: 0 4px 18px rgba(102,126,234,0.10);
+  transition: box-shadow 0.5s cubic-bezier(0.22,1,0.36,1), transform 0.5s cubic-bezier(0.22,1,0.36,1);
+  border: none;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.modern-home-card:hover {
+  box-shadow: 0 12px 32px rgba(102,126,234,0.18), 0 2px 8px rgba(0,0,0,0.08);
+  transform: translateY(-6px) scale(1.025);
+  z-index: 2;
+}
+
+/* Faculty Card */
+.faculty-card {
+  background: rgba(255,255,255,0.92);
+  border: 2.5px solid #667eea;
+  border-radius: 1.5rem !important;
+  box-shadow: 0 4px 18px rgba(102,126,234,0.10);
+  transition: box-shadow 0.5s cubic-bezier(0.22,1,0.36,1), border-color 0.4s, transform 0.5s cubic-bezier(0.22,1,0.36,1);
+}
+.faculty-card:hover {
+  border-color: #764ba2;
+  box-shadow: 0 12px 32px rgba(118,75,162,0.18), 0 2px 8px rgba(0,0,0,0.08);
+  transform: translateY(-8px) scale(1.04);
+}
+.faculty-img {
+  width: 120px !important;
+  height: 120px !important;
+  object-fit: cover;
+  border: 4px solid #fff;
+  box-shadow: 0 2px 8px rgba(102,126,234,0.13);
+  margin-bottom: 1rem;
+}
+.faculty-card .card-title {
+  margin-bottom: -0.1rem !important;
+}
+.faculty-card .card-text {
+  margin-top: 0.01rem !important;
+}
+
+/* Section Headings */
+.boxes {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+h2.text-center.fw-bold {
+  color: #764ba2;
+  text-shadow: 0 2px 8px rgba(102,126,234,0.10);
+  font-size: 2.1rem;
+  margin-bottom: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .hero-caption {
+    padding: 1.2rem 1.2rem;
+  }
+  .faculty-img {
+    width: 90px !important;
+    height: 90px !important;
+  }
+  h2.text-center.fw-bold {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 767px) {
+  .hero-caption {
+    padding: 0.7rem 0.5rem;
+    font-size: 1.1rem;
+  }
+  .modern-home-card {
+    min-height: 120px;
+    padding: 1.2rem !important;
+  }
+  .faculty-card {
+    min-height: 120px;
+    padding: 1.2rem !important;
+  }
+  .boxes {
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+  }
+}
+@media (max-width: 575px) {
+  .hero-caption h1, .hero-caption .display-4 {
+    font-size: 1.2rem;
+  }
+  .faculty-img {
+    width: 60px !important;
+    height: 60px !important;
+  }
+}
+

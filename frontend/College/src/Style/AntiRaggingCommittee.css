@@ -1,0 +1,282 @@
+/* Anti-Ragging Committee Styles */
+.arc-section {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  min-height: 100vh;
+  padding: 4rem 0;
+}
+
+/* Enhanced Typography */
+.arc-section h1 {
+  font-family: 'Merriweather', Georgia, serif;
+  font-weight: 700;
+  color: #1e293b;
+  letter-spacing: -0.02em;
+}
+
+.arc-section .lead {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.2rem;
+  color: #64748b;
+  font-weight: 400;
+}
+
+/* Enhanced Card Styles */
+.arc-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.arc-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.arc-card .card-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Icon Circle */
+.icon-circle {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  box-shadow: 0 8px 24px rgba(30, 64, 175, 0.3);
+  transition: all 0.3s ease;
+}
+
+.icon-circle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 32px rgba(30, 64, 175, 0.4);
+}
+
+/* Card Title */
+.arc-card .card-title {
+  font-family: 'Roboto Slab', Georgia, serif;
+  font-weight: 600;
+  color: #1e293b;
+  letter-spacing: -0.01em;
+  margin-bottom: 1.5rem;
+}
+
+/* Card Text */
+.arc-card .card-text {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #475569;
+  flex-grow: 1;
+}
+
+/* Committee Members Section */
+.committee-members {
+  flex-grow: 1;
+}
+
+.member-group {
+  margin-bottom: 1.5rem;
+}
+
+.member-group:last-child {
+  margin-bottom: 0;
+}
+
+.member-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.member-item {
+  background: rgba(248, 250, 252, 0.8);
+  border: 1px solid rgba(226, 232, 240, 0.6);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 500;
+  color: #374151;
+}
+
+.member-item:hover {
+  background: rgba(30, 64, 175, 0.05);
+  border-color: #1e40af;
+  transform: translateX(4px);
+}
+
+.member-item i {
+  color: #1e40af;
+  font-size: 0.9rem;
+}
+
+/* Badge Styles */
+.badge {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.01em;
+}
+
+/* Contact Section */
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+}
+
+.contact-item {
+  padding: 1rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.contact-item h6 {
+  font-family: 'Roboto Slab', Georgia, serif;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.contact-item small {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .arc-section {
+    padding: 2rem 0;
+  }
+  
+  .arc-section h1 {
+    font-size: 2rem;
+  }
+  
+  .arc-section .lead {
+    font-size: 1rem;
+  }
+  
+  .icon-circle {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .icon-circle span {
+    font-size: 1.5rem !important;
+  }
+  
+  .arc-card .card-title {
+    font-size: 1.25rem;
+  }
+  
+  .arc-card .card-text {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .arc-section h1 {
+    font-size: 1.75rem;
+  }
+  
+  .arc-card .card-body {
+    padding: 1.5rem;
+  }
+  
+  .member-item {
+    font-size: 0.9rem;
+    padding: 0.75rem;
+  }
+  
+  .contact-item {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Animation Classes */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.6s ease-out;
+}
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Enhanced Focus States */
+.arc-card:focus-within {
+  box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+}
+
+.member-item:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(30, 64, 175, 0.3);
+}
+
+/* Loading States */
+.arc-card.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.arc-card.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #1e40af;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+} 

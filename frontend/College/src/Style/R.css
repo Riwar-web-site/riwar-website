@@ -1,0 +1,456 @@
+.uni{
+    
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+  font-style:oblique;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+/* Rewar College Section Styles */
+.rcollege-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  min-height: 100vh;
+  padding: 4rem 0;
+}
+
+/* Title Styling */
+.title-icon {
+  font-size: 3rem;
+  margin-right: 0.5rem;
+  display: inline-block;
+  animation: collegePulse 2s infinite;
+}
+
+@keyframes collegePulse {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(-5deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.glow {
+  text-shadow: 1px 1px 8px rgba(0, 153, 255, 0.25), 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Card Styling */
+.info-card,
+.facility-card-container,
+.program-card-container,
+.club-card-container,
+.vision-mission-card,
+.gallery-card-container {
+  transition: transform 0.6s cubic-bezier(0.22,1,0.36,1), box-shadow 0.6s cubic-bezier(0.22,1,0.36,1);
+  border-radius: 15px !important;
+  overflow: hidden;
+}
+
+.info-card:hover,
+.facility-card-container:hover,
+.program-card-container:hover,
+.club-card-container:hover,
+.vision-mission-card:hover,
+.gallery-card-container:hover {
+  transform: translateY(-4px) scale(1.015);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15) !important;
+}
+
+.info-card .card-header,
+.facility-card-container .card-header,
+.program-card-container .card-header,
+.club-card-container .card-header,
+.vision-mission-card .card-header,
+.gallery-card-container .card-header {
+  border-radius: 15px 15px 0 0 !important;
+  border: none;
+}
+
+/* Facility Cards */
+.facility-card {
+  background: #f8f9fa;
+  border-left: 4px solid #0d6efd;
+  transition: transform 0.6s cubic-bezier(0.22,1,0.36,1), box-shadow 0.6s cubic-bezier(0.22,1,0.36,1), background 0.3s;
+  border-radius: 8px;
+}
+
+.facility-card:hover {
+  background: #e3f2fd;
+  transform: translateX(3px) scale(1.01);
+  box-shadow: 0 4px 12px rgba(13, 110, 253, 0.15);
+}
+
+.icon-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #0d6efd, #0b5ed7);
+  color: white;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 8px rgba(13, 110, 253, 0.3);
+}
+
+.facility-info {
+  flex: 1;
+}
+
+.facility-info h6 {
+  color: #495057;
+  margin-bottom: 0.5rem;
+}
+
+/* Program Cards */
+.program-card {
+  background: #f8f9fa;
+  border-left: 4px solid #198754;
+  transition: transform 0.6s cubic-bezier(0.22,1,0.36,1), box-shadow 0.6s cubic-bezier(0.22,1,0.36,1), background 0.3s;
+  border-radius: 8px;
+  height: 100%;
+}
+
+.program-card:hover {
+  background: #d1e7dd;
+  transform: translateX(3px) scale(1.01);
+  box-shadow: 0 4px 12px rgba(25, 135, 84, 0.15);
+}
+
+.program-card h6 {
+  color: #495057;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* Club Cards */
+.club-card {
+  background: #f8f9fa;
+  border-left: 4px solid #ffc107;
+  transition: transform 0.6s cubic-bezier(0.22,1,0.36,1), box-shadow 0.6s cubic-bezier(0.22,1,0.36,1), background 0.3s;
+  border-radius: 8px;
+  height: 100%;
+}
+
+.club-card:hover {
+  background: #fff3cd;
+  transform: translateX(3px) scale(1.01);
+  box-shadow: 0 4px 12px rgba(255, 193, 7, 0.15);
+}
+
+.club-card h6 {
+  color: #495057;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* Vision Mission Items */
+.vision-item,
+.mission-item {
+  background: #f8f9fa;
+  border-left: 4px solid #dc3545;
+  transition: transform 0.6s cubic-bezier(0.22,1,0.36,1), box-shadow 0.6s cubic-bezier(0.22,1,0.36,1), background 0.3s;
+  border-radius: 8px;
+}
+
+.vision-item:hover,
+.mission-item:hover {
+  background: #f8d7da;
+  transform: translateX(3px) scale(1.01);
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.15);
+}
+
+/* Facility List */
+.facility-list {
+  max-height: 300px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #0d6efd #f8f9fa;
+}
+
+.facility-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.facility-list::-webkit-scrollbar-track {
+  background: #f8f9fa;
+  border-radius: 3px;
+}
+
+.facility-list::-webkit-scrollbar-thumb {
+  background: #0d6efd;
+  border-radius: 3px;
+}
+
+.facility-list::-webkit-scrollbar-thumb:hover {
+  background: #0b5ed7;
+}
+
+/* Program List */
+.program-list {
+  max-height: 300px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #198754 #f8f9fa;
+}
+
+.program-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.program-list::-webkit-scrollbar-track {
+  background: #f8f9fa;
+  border-radius: 3px;
+}
+
+.program-list::-webkit-scrollbar-thumb {
+  background: #198754;
+  border-radius: 3px;
+}
+
+.program-list::-webkit-scrollbar-thumb:hover {
+  background: #146c43;
+}
+
+/* Vision Mission List */
+.vision-mission-list {
+  max-height: 300px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #dc3545 #f8f9fa;
+}
+
+.vision-mission-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.vision-mission-list::-webkit-scrollbar-track {
+  background: #f8f9fa;
+  border-radius: 3px;
+}
+
+.vision-mission-list::-webkit-scrollbar-thumb {
+  background: #dc3545;
+  border-radius: 3px;
+}
+
+.vision-mission-list::-webkit-scrollbar-thumb:hover {
+  background: #c82333;
+}
+
+.facility-list,
+.program-list,
+.vision-mission-list {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* Badge Styling */
+.badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+}
+
+/* College Theme Colors */
+.text-primary {
+  color: #0d6efd !important;
+}
+
+.bg-primary {
+  background-color: #0d6efd !important;
+}
+
+.bg-success {
+  background-color: #198754 !important;
+}
+
+.bg-info {
+  background-color: #0dcaf0 !important;
+}
+
+.bg-warning {
+  background-color: #ffc107 !important;
+}
+
+.bg-danger {
+  background-color: #dc3545 !important;
+}
+
+.bg-secondary {
+  background-color: #6c757d !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .rcollege-section {
+    padding: 2rem 0;
+  }
+  
+  .title-icon {
+    font-size: 2.5rem;
+  }
+  
+  .info-card,
+  .facility-card-container,
+  .program-card-container,
+  .club-card-container,
+  .vision-mission-card,
+  .gallery-card-container {
+    margin-bottom: 1.5rem;
+  }
+  
+  .facility-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .icon-circle {
+    margin-bottom: 1rem;
+    margin-right: 0 !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .info-card .card-header h4,
+  .facility-card-container .card-header h4,
+  .program-card-container .card-header h4,
+  .club-card-container .card-header h4,
+  .vision-mission-card .card-header h4,
+  .gallery-card-container .card-header h4 {
+    font-size: 1.1rem;
+  }
+  
+  .facility-info h6 {
+    font-size: 0.9rem;
+  }
+  
+  .program-card h6,
+  .club-card h6 {
+    font-size: 0.9rem;
+  }
+  
+  .icon-circle {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+  
+  .title-icon {
+    font-size: 2rem;
+  }
+}
+
+/* Animation Classes */
+.animate__fadeIn, .animate__fadeInUp, .animate__fadeInLeft, .animate__fadeInRight, .animate__fadeInDown, .animate__zoomIn {
+  animation-duration: 0.8s;
+  animation-fill-mode: both;
+}
+
+/* Hover Effects */
+.bg-light-hover {
+  transition: background-color 0.3s ease;
+}
+
+.bg-light-hover:hover {
+  background-color: #e9ecef !important;
+}
+
+/* Card Header Icons */
+.card-header span {
+  font-size: 1.5rem;
+}
+
+/* Gallery Grid */
+.gallery-row {
+  margin: 0;
+}
+
+.gallery-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #fff;
+  border-radius: 15px !important;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  transition: box-shadow 0.4s, transform 0.4s;
+}
+
+.gallery-card:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 16px 40px rgba(0, 123, 255, 0.13), 0 2px 8px rgba(0,0,0,0.08);
+  z-index: 2;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0 !important;
+  transition: filter 0.4s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.gallery-card:hover .gallery-img {
+  filter: brightness(0.97) saturate(1.1) drop-shadow(0 2px 8px rgba(0,123,255,0.08));
+}
+
+/* Smooth Card Transitions */
+.smooth-card {
+  transition: box-shadow 0.6s cubic-bezier(0.22,1,0.36,1), transform 0.6s cubic-bezier(0.22,1,0.36,1);
+  border-radius: 15px !important;
+  background: #fff;
+}
+
+.smooth-card:hover, .hover-effect:hover {
+  transform: translateY(-4px) scale(1.015);
+  box-shadow: 0 16px 40px rgba(0, 123, 255, 0.13), 0 2px 8px rgba(0,0,0,0.08);
+  z-index: 2;
+}
+
+/* College Theme Enhancements */
+.rcollege-section .card {
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.rcollege-section .card-header {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.rcollege-section .badge {
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+/* Text Styling */
+.rcollege-section .lead {
+  font-weight: 400;
+  color: #6c757d;
+}
+
+.rcollege-section .text-muted {
+  color: #6c757d !important;
+}
+
+/* Statistics Display */
+.text-info {
+  color: #0dcaf0 !important;
+}
+
+/* Enhanced Typography */
+.rcollege-section h1 {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.rcollege-section .card-header h4 {
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
