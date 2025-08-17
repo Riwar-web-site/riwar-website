@@ -290,9 +290,11 @@ function Gallery() {
                 <img 
                   src={photo.image} 
                   alt={photo.title}
+                  loading='lazy'
+                  decoding='async'
                   className="img-fluid rounded shadow-sm w-100"
                   style={{
-                    height: '250px',
+                    height: '200px',
                     objectFit: 'cover',
                     transition: 'transform 0.3s ease, box-shadow 0.3s ease',
                     cursor: 'pointer'

@@ -46,58 +46,21 @@ import Contact from './Contact/Contact';
 import Footer from './ReuseCompo/Footer';
 import SignUp from './AdminControl/SignUp';
 import Login from './AdminControl/Login';
+import Register from './AdminControl/Register';
+import Logout from './AdminControl/Logout';
 import Choose from './AdminControl/Choose';
 import Upload from './AdminControl/Upload';
 import UploadTwo from './AdminControl/UploadTwo';
 import Gallery from './gallery/Gallery';
 
+import Protected from './utils/Protected';
+import PageNotFound from './utils/PageNotFound';
 
 export default function App() {
   return (
     <div>
     <NavScrollExample/>
-    {/* <AboutCollege />
-    <Administration />
-    <NACC />
-    <Admission /> */}
-    {/* <Departments/> */}
-    {/* <Courses /> */}
-    {/* <SupportingStaff /> */}
-    {/* <Publication/> */}
-    {/* <ResearchandInnovationPublicationCell /> */}
-    {/* <Achievements /> */}
-    {/* <WomenCell /> */}
-    {/* <EntrepreneurshipDevelopmentCell/> */}
-    {/* <ICGC/> */}
-    {/* <GenderEquityMonitoringCell/> */}
-    {/* <ICTDevelopmentCell/> */}
-    {/* <EqualOppertunity/> */}
-    {/* <SportDevelopmentCell/> */}
-    {/* <AntiRaggingCommittee/> */}
-    {/* <GrievanceCell/> */}
-    {/* <InternalComplaintCommittee /> */}
-    {/* <ArtandCultureCommittee/> */}
-    {/* <GreenCampus/> */}
-{/* <HealthCareCommittee/> */}
-{/* <AwardsandScholarship/> */}
-{/* <Achivements/> */}
-{/* <NCC/> */}
-{/* <NSS/> */}
-{/* <RedRibbonClub/> */}
-{/* <StudentsUnion/> */}
-{/* <RangerAndRover/> */}
-{/* <StudentClub/> */}
-{/* <YouthRedCross/> */}
-{/* <FacilitiesHostel/> */}
-{/* <Gymnasium/> */}
-{/* <RCollege/> */}
-{/* <Journals/> */}
-{/* <Library/> */}
-{/* <Home/> */}
-{/* <IQAC/> */}
-{/* <ResearchandInnovationPublicationCell /> */}
-{/* <Achievements /> */}
-
+  
 <Routes>
 
   <Route path='/' element={<Home/>}>
@@ -107,7 +70,7 @@ export default function App() {
   <Route path="/iqac" element={<IQAC />} />
   <Route path="/aboutcollege" element={<AboutCollege />} />
   <Route path="/administration" element={<Administration />} />
-  <Route path="/nacc" element={<NACC />} />cd
+  <Route path="/nacc" element={<NACC />} />
   <Route path="/admission123" element={<Admission />} />
 
   <Route path="/departments" element={<Departments />} />
@@ -150,13 +113,21 @@ export default function App() {
   <Route path="/journals" element={<Journals />} />
 
   <Route path="/contact" element={<Contact />} />
-  <Route path="/signup12345600" element={<SignUp/>}/>
-  <Route path="/login" element={<Login/>} />
-  <Route path="/chhoose" element={<Choose/>}/>
-  <Route path="/api/auth/upload" element={<Upload/>}/>
-  <Route path="/api/auth/upload/iqac" element={<UploadTwo/> }/>
-  <Route path='/gallery' element={<Gallery/>}/>
 
+  <Route path="/login" element={<Login/>} />
+  <Route path="/logout" element={<Logout/>} />
+  
+  {/* Protected Routes */}
+  <Route element={<Protected />}>
+    <Route path="/choose" element={<Choose />} />
+    <Route path="/register" element={<Register />} />
+    <Route path="/api/auth/upload" element={<Upload />} />
+    <Route path="/api/auth/upload/iqac" element={<UploadTwo />} />
+  </Route>
+  
+  <Route path='/gallery' element={<Gallery/>}/>
+  <Route path="*" element={<PageNotFound/>} />
+  
   
 </Routes>
 

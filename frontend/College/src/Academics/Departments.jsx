@@ -478,76 +478,113 @@ function Departments() {
   };
 
   return (
-    <Container className="py-5" style={{marginTop:"5rem"}}>
-      <h1 className="text-center mb-5 display-4 fw-bold text-primary">College Departments</h1>
-      <p className="text-center text-muted mb-5 lead">
-        Explore our diverse academic departments offering quality education and research opportunities
-      </p>
-      
-      <Row>
-        {departments.map((dept, index) => (
-          <Col md={6} lg={4} key={index} className="mb-4">
-            <Card 
-              className="dept-card shadow-lg rounded-4 border-0 animate__animated animate__fadeInUp"
-              data-dept={dept.name}
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <Card.Body className="p-4">
-                <div className="d-flex justify-content-between align-items-start mb-3">
-                  <div>
-                    <Card.Title className="fw-semibold text-dark mb-2">
-                      {dept.name}
-                    </Card.Title>
-                    <p className="text-muted small mb-2">{dept.description}</p>
-                    <div className="d-flex gap-2 mb-3">
-                      <Badge bg="primary" className="px-2 py-1">
-                        {dept.staff} Staff
-                      </Badge>
-                      <Badge bg="success" className="px-2 py-1">
-                        {dept.courses.length} Courses
-                      </Badge>
+    <div className="departments-container" style={{marginTop:"5rem"}}>
+      {/* Hero Section */}
+      <div className="hero-section">
+        <Container>
+          <div className="hero-content text-center">
+            <div className="hero-badge mb-4">
+              <span className="badge-text">🎓 Academic Excellence</span>
+            </div>
+            <h1 className="hero-title mb-4">
+              Our <span className="gradient-text">Departments</span>
+            </h1>
+            <p className="hero-subtitle mb-5">
+              Discover world-class education across diverse academic disciplines with 
+              dedicated faculty and cutting-edge research opportunities
+            </p>
+            <div className="stats-row">
+              <div className="stat-item">
+                <div className="stat-number">{departments.length}</div>
+                <div className="stat-label">Departments</div>
+              </div>
+              <div className="stat-item">
+                <div className="stat-number">{departments.reduce((total, dept) => total + dept.staff, 0)}</div>
+                <div className="stat-label">Faculty Members</div>
+              </div>
+              <div className="stat-item">
+                <div className="stat-number">{departments.reduce((total, dept) => total + dept.courses.length, 0)}</div>
+                <div className="stat-label">Programs Offered</div>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </div>
+
+      {/* Departments Grid */}
+      <Container className="departments-grid-section py-5">
+        <Row className="g-4">
+          {departments.map((dept, index) => (
+            <Col md={6} lg={4} key={index} className="mb-4">
+              <Card 
+                className="dept-card modern-card"
+                data-dept={dept.name}
+                style={{ 
+                  '--dept-color': dept.color
+                }}
+              >
+                {/* Gradient Header */}
+                <div className="card-header-gradient" style={{background: `linear-gradient(135deg, ${dept.color}15 0%, ${dept.color}25 100%)`}}>
+                  <div className="dept-icon-wrapper">
+                    <div className="dept-icon" style={{background: dept.color}}>
+                      {dept.name.charAt(0)}
                     </div>
                   </div>
                   <Button
-                    variant="primary"
+                    variant="outline-primary"
                     size="sm"
                     onClick={() => toggleCard(index)}
                     aria-controls={`collapse-${index}`}
                     aria-expanded={openIndex === index}
-                    className="explore-btn rounded-pill px-3 py-1"
+                    className="explore-btn-modern"
                   >
-                    {openIndex === index ? 'Hide' : 'Explore'}
+                    {openIndex === index ? (
+                      <><i className="fas fa-chevron-up me-1"></i>Hide</>
+                    ) : (
+                      <><i className="fas fa-plus me-1"></i>Explore</>
+                    )}
                   </Button>
                 </div>
-                
-                <Collapse in={openIndex === index}>
-                  <div id={`collapse-${index}`} className="mt-3 animate__animated animate__fadeIn">
-                    <div className="mb-3">
-                      <h6 className="fw-semibold text-primary mb-2">Available Courses:</h6>
-                      <div className="d-flex flex-wrap gap-1">
-                        {dept.courses.map((course, idx) => (
-                          <Badge key={idx} bg="light" text="dark" className="px-2 py-1">
-                            {course}
-                          </Badge>
-                        ))}
+
+                <Card.Body className="modern-card-body">
+                  <div className="dept-header-info">
+                    <Card.Title className="dept-title mb-2">
+                      {dept.name}
+                    </Card.Title>
+                    <p className="dept-description">{dept.description}</p>
+                    <div className="stats-badges">
+                      <div className="stat-badge">
+                        <i className="fas fa-users me-1"></i>
+                        {dept.staff} Faculty
+                      </div>
+                      <div className="stat-badge">
+                        <i className="fas fa-graduation-cap me-1"></i>
+                        {dept.courses.length} Programs
                       </div>
                     </div>
-                    
-                    <ul className="list-group list-group-flush">
+                  </div>
+                
+                <Collapse in={openIndex === index}>
+                  <div id={`collapse-${index}`} className="collapse-content">
+                    <div className="options-grid">
                       {departmentOptions.map((opt, idx) => (
-                        <li
+                        <div
                           key={idx}
-                          className="list-group-item bg-transparent border-0 py-2 px-0 hover-list-item"
-                          style={{ cursor: 'pointer' }}
+                          className="option-card"
                           onClick={() => handleOptionClick(dept, opt)}
                         >
-                          <div className="text-decoration-none text-dark-emphasis fw-medium transition-hover d-flex align-items-center">
-                            <span className="me-2">{opt.icon}</span>
+                          <div className="option-icon">
+                            {opt.icon}
+                          </div>
+                          <div className="option-text">
                             {opt.name}
                           </div>
-                        </li>
+                          <div className="option-arrow">
+                            <i className="fas fa-arrow-right"></i>
+                          </div>
+                        </div>
                       ))}
-                    </ul>
+                    </div>
                   </div>
                 </Collapse>
               </Card.Body>
@@ -555,26 +592,33 @@ function Departments() {
           </Col>
         ))}
       </Row>
-      
-    
-
-      {/* Modal for Department Information */}
-      <Modal show={showModal} onHide={handleCloseModal} size="lg" centered>
-        <Modal.Header closeButton>
-          <Modal.Title className="fw-bold text-primary">
-            {selectedOption?.name} - {selectedDept?.name}
-          </Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          {renderModalContent()}
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleCloseModal}>
-            Close
-          </Button>
-        </Modal.Footer>
-      </Modal>
     </Container>
+    
+    {/* Enhanced Modal */}
+    <Modal show={showModal} onHide={handleCloseModal} size="lg" centered className="modern-modal">
+      <Modal.Header closeButton className="border-0 pb-0">
+        <Modal.Title className="modal-title-modern d-flex align-items-center">
+          <div className="modal-icon me-3">
+            {selectedOption?.icon}
+          </div>
+          <div>
+            <div className="modal-main-title">{selectedOption?.name}</div>
+            <div className="modal-subtitle">{selectedDept?.name} Department</div>
+          </div>
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body className="px-4 py-3">
+        <div className="modal-content-wrapper">
+          {renderModalContent()}
+        </div>
+      </Modal.Body>
+      <Modal.Footer className="border-0 pt-0">
+        <Button variant="outline-secondary" onClick={handleCloseModal} className="modern-close-btn">
+          <i className="fas fa-times me-2"></i>Close
+        </Button>
+      </Modal.Footer>
+    </Modal>
+  </div>
   );
 }
 

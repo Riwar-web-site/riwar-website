@@ -1,0 +1,111 @@
+/* Gallery Performance Optimizations */
+
+/* GPU acceleration for smooth animations */
+.gallery-item {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.gallery-item img {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* Optimized loading states */
+.gallery-loading-placeholder {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading-shimmer 1.5s infinite;
+}
+
+@keyframes loading-shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Reduce layout shift */
+.gallery-container {
+  contain: layout style paint;
+}
+
+/* Optimize scrolling performance */
+.gallery-section {
+  will-change: scroll-position;
+  transform: translateZ(0);
+}
+
+/* Button optimization */
+.gallery-nav-btn {
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.gallery-nav-btn:hover {
+  transform: translateZ(0) scale(1.02);
+}
+
+/* Image container optimization */
+.gallery-image-container {
+  contain: layout style paint size;
+  will-change: transform;
+}
+
+/* Reduce repaint on hover */
+.gallery-item:hover {
+  contain: layout style paint;
+}
+
+/* Optimize text rendering */
+.gallery-title, .gallery-caption {
+  text-rendering: optimizeLegibility;
+  font-display: swap;
+}
+
+/* Reduce composite layers */
+.gallery-overlay {
+  will-change: opacity;
+  backface-visibility: hidden;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .gallery-item img {
+    image-rendering: auto;
+    transform: none;
+  }
+  
+  .gallery-item:hover {
+    transform: none;
+  }
+  
+  .gallery-item img:hover {
+    transform: none !important;
+  }
+}
+
+/* Preload critical images */
+.gallery-item img[loading="eager"] {
+  image-rendering: -webkit-optimize-contrast;
+}
+
+/* Error state styling */
+.gallery-error-state {
+  background: #f8f9fa;
+  border: 2px dashed #dee2e6;
+  color: #6c757d;
+}
+
+/* Loading spinner optimization */
+.gallery-spinner {
+  animation: spin 1s linear infinite;
+  will-change: transform;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
