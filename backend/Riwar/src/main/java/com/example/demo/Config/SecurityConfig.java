@@ -20,18 +20,15 @@ public class SecurityConfig {
 @Bean
 public SecurityFilterChain filterChains(HttpSecurity http)throws Exception
 {	 http.authorizeHttpRequests((requests) -> requests
-            .requestMatchers("/auth/register","/doc-iqac/upload","/api/upload","auth/show").permitAll()
+            .requestMatchers("/auth/register", "/auth/login", "/auth/logout", "/doc-iqac/upload", "/api/upload", "/auth/show").permitAll()
             .requestMatchers("/api/list", "/api/download/**").permitAll()
             .anyRequest().permitAll()
         );
 			
 		    http.headers(headers -> headers.frameOptions().disable()  // ⛔️ This line explicitly removes X-Frame-Options 
 		    		);
-			http.formLogin(form->form
-					.defaultSuccessUrl("http://localhost:5173/chhoose",true)
-					.permitAll()
-								
-					);
+			// Disable default form login
+			http.formLogin(form -> form.disable());
 			http.httpBasic(Customizer.withDefaults());
 			http.csrf(csrf->csrf.disable());
 			return http.build();

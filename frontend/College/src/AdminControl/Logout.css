@@ -1,0 +1,155 @@
+.logout-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #ff7675 0%, #d63031 100%);
+    padding: 20px;
+}
+
+.logout-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.logout-header {
+    margin-bottom: 2rem;
+}
+
+.logout-header h2 {
+    color: #333;
+    margin: 0 0 1rem 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.logout-header p {
+    color: #666;
+    margin: 0 0 1rem 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.user-info {
+    background-color: #f8f9fa;
+    padding: 0.75rem;
+    border-radius: 5px;
+    border-left: 4px solid #ff7675;
+}
+
+.user-info span {
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.user-info strong {
+    color: #ff7675;
+}
+
+.logout-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.logout-button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 140px;
+}
+
+.logout-button.confirm {
+    background: linear-gradient(135deg, #ff7675 0%, #d63031 100%);
+    color: white;
+}
+
+.logout-button.confirm:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 118, 117, 0.4);
+}
+
+.logout-button.cancel {
+    background: #6c757d;
+    color: white;
+}
+
+.logout-button.cancel:hover:not(:disabled) {
+    background: #5a6268;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(108, 117, 125, 0.4);
+}
+
+.logout-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.logout-button:active {
+    transform: translateY(0);
+}
+
+/* Loading animation for confirm button */
+.logout-button.confirm:disabled::after {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-left: 8px;
+    border: 2px solid transparent;
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    .logout-container {
+        padding: 10px;
+    }
+    
+    .logout-card {
+        padding: 2rem;
+    }
+    
+    .logout-actions {
+        flex-direction: column;
+    }
+    
+    .logout-button {
+        width: 100%;
+        min-width: auto;
+    }
+    
+    .logout-header h2 {
+        font-size: 1.5rem;
+    }
+}
